@@ -7,6 +7,7 @@ public class Example {
 
     public static void main(String[] args) throws IOException {
         ParserFacade parserFacade = new ParserFacade();
-        new AstPrinter().print(parserFacade.parse(new File("examples/render.py")));
+        AstPrinter astPrinter = new AstPrinter();
+        astPrinter.print(parserFacade.parse(new File("examples/simple.py")));
     }
 }
